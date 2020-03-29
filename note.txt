@@ -1,8 +1,0 @@
-tim hieu ve photoshop
-    + CS6
-    + giao dien
-    + thanh cong cu:
-        + move tool: cong cu di chuyen
-        + select tool: chon vung`-> do pixel
-        + crop tool: cat 1 vung anh
-        
