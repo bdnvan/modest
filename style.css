@@ -1,0 +1,604 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: Roboto, sans-serif;
+    margin: 0px auto;
+}
+.container {
+    width: 1140px;
+    margin: 0px auto;
+}
+h2.title {
+    display: inline-block;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 36px;
+    line-height: 35px;
+    font-weight: normal;
+    border-left: 10px solid #e1e6ea;
+    padding-left: 14px;
+    margin-top: 83px;
+    margin-bottom: 61px;
+}
+h2.title-white{
+    color: white;
+    border-left: 10px solid #4e5a62;
+}
+header{
+    background-color: #1d2126;
+    position: relative;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    line-height: 81px;
+    height: 81px;
+}
+header .container ul li {
+    display: inline-block;
+}
+header .container ul li a {
+    text-decoration: none;
+    color: #929b9b;
+    padding: 9px 12px;
+    text-transform: uppercase;
+    border: 2px solid transparent;
+    border-radius: 3px;
+    margin-left: 16px;
+    font-size: 14px;
+}
+header .container ul li a:hover {
+    border-color: #5b6168;
+}
+a:active, header .container ul li:first-child a {
+    border-color: #23b7a4;
+    color: #23b7a4;
+}
+#banner {
+    background: #363a51 url(images/banner.jpg) no-repeat top center;
+    background-size: cover;
+}
+#banner div.container {
+    height: 660px;
+    position: relative;
+}
+#banner div.container > div {
+    position: absolute;
+    width: 653px;
+    top: 222px;
+    left: 0px;
+}
+#banner div.container > div h2 {
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+}
+#banner div.container > div p {
+    font-size: 16px;
+    font-family: "Open Sans";
+    color: rgb(204, 208, 215);
+    margin-top: 26px;
+}
+#banner  ul{
+    list-style: none;
+}
+#banner  ul li {
+    display: inline-block;
+}
+#banner  ul li a{
+    text-decoration: none;
+}
+#banner div div div ul li {
+    margin-right: 10px;
+    margin-top: 43px;
+}
+#banner div div div ul li a {
+    text-transform: uppercase;
+    display: block;
+    width: 124px;
+    height: 44px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #ffffff;
+    border-radius: 3px;
+    text-align: center;
+    border: 2px solid white;
+}
+#banner div div div ul li a:hover {
+    border: 2px solid #23b7a4;
+    background-color: #23b7a4;
+}
+#banner div.container > ul {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 628px;
+}
+#banner div.container > ul li{
+    margin-left: 9px;
+    margin-right: 0px;
+}
+#banner div.container > ul li:first-child{
+    margin-left: 0px;
+}
+#banner div.container > ul li a {
+    display: block;
+    border: 2px solid white;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    text-indent: -9999px;
+}
+#banner div.container > ul li a:hover{
+    background-color: white;
+}
+#banner div.container > ul li a.active{
+    background-color: white;
+}
+#about{
+    border-bottom: 1px solid #dde1e4;
+}
+#about div.container{
+    height: 612px;
+}
+
+#about div.container div p {
+    color: #8d8f92;
+    font-family: "Open Sans";
+    font-size: 16px;
+    line-height: 26px;
+}
+#about div.container div div#content-left {
+    display: block;
+    width: 649px;
+    float: left;
+}
+#about div.container div div#content-left p:first-child {
+    margin-bottom: 35px;
+}
+#about div.container div div#content-left ul{
+    margin-top: 54px;
+}
+#about div.container div div#content-left > ul > li {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin-right: 1px;
+    float: left;
+}
+#about div.container div div#content-left ul li a {
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    text-indent: -9999px;
+}
+.clearfix {
+    overflow: auto;
+}
+#about div.container div div#content-left ul li:nth-child(1){ 
+    background: #c8cdd0 url(images/socials/facebook.png) no-repeat center center;
+}
+#about div.container div div#content-left ul li:nth-child(2){
+    background: #c8cdd0 url(images/socials/twitter.png) no-repeat center center;
+}
+#about div.container div div#content-left ul li:nth-child(3){
+    background: #c8cdd0 url(images/socials/google.png) no-repeat center center;
+}
+#about div.container div div#content-left ul li:nth-child(4){
+    background: #c8cdd0 url(images/socials/circle.png) no-repeat center center;
+}
+#about div.container div div#content-left ul li:nth-child(5){
+    background: #c8cdd0 url(images/socials/be.png) no-repeat center center;
+}
+#about div.container div div#content-left > ul > li:hover{
+    background-color: #d0d5d9;
+}
+#about div.container div div#content-right {
+    display: block;
+    width: 455px;
+    float: right;
+}
+#about div.container div div#content-right ol{
+    list-style: decimal-leading-zero;
+}
+#about div.container div div#content-right ol li h3{
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #292f36;
+    font-weight: 500;
+    margin-left: 70px;
+    margin-bottom: 10px;
+}
+#about div.container div div#content-right ol li p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #8d8f92;
+    margin-left: 70px;
+    margin-bottom: 14px;
+}
+#about div.container div div#content-right ol li:last-child p{
+    margin-bottom: 0px;
+}
+#about ol {
+    counter-reset: about;
+}
+#about ol li{
+    list-style: none;
+    position: relative;
+}
+#about ol li:before{
+    position: absolute;
+    counter-increment: about;
+    content: counters(about,'.',decimal-leading-zero);
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: #23b7a4;
+    text-align: center;
+    color: white;
+}
+
+#team{
+    height: 650px;
+}
+#team > div.container > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    flex-basis: 263px;
+    height: 375px;
+}
+#team > div.container > div > div {
+    position: relative;
+}
+#team > div.container > div > div > div.info {
+    position: absolute;
+    width: 100%;
+    height: 75px;
+    top: 300px;
+    left: 0px;
+    padding-left: 20px;
+    background-color: #e1e6ea;
+}
+#team > div.container > div > div > div h3{
+    font-size: 16px;
+    padding-top: 13px;
+    text-transform: uppercase;
+    font-weight: normal;
+    color: #292f36;
+}
+#team > div.container > div > div > div p {
+    font-size: 14px;
+    line-height: 26px;
+    color: #8d8f92;
+}
+#team div.mask {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 0px;
+    left: 0px;
+    opacity: 0.4;
+    background-color: #e5e9eb;
+}
+#team div.container ul{
+    display: none;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+    align-items: center;
+}
+#team div.container > div > div:hover div.mask{
+    display: block;
+}
+#team div.container > div > div:hover ul {
+    display: flex;
+}
+#team div.container > div > div ul li a:hover{
+    background-color: #4e5a62;
+}
+#team  div.container > div > div:hover div.info {
+    background-color: #3a454d;
+}
+#team  div.container > div > div:hover div.info h3 {
+    color: white;
+}
+#team  div.container > div > div:hover div.info p {
+    color: white;
+}
+#team div.container ul li{
+    display: block;
+    float: left;
+    margin-right: 1px;
+}
+#team div.container ul li a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #3a454d;
+    text-indent: -9999px;
+}
+#team div.container ul li:first-child a {
+    background: #3a454d url(images/socials/twitter.png) no-repeat center center;
+}
+#team div.container ul li:nth-child(2) a {
+    background: #3a454d url(images/socials/facebook.png) no-repeat center center;
+}
+#team div.container ul li:last-child a {
+    background: #3a454d url(images/socials/linkedin.png) no-repeat center center;
+}
+.dark {
+    background-color: #3a454d;
+}
+div#work div.container {
+    height: 900px;
+}
+div#work > div.container > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+div#work > div.container > div div.work-info{
+    position: relative;
+    margin-bottom: 30px;
+}
+div#work > div.container > div div.work-info div.mask {
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 206px;
+    background-color: #506371;
+    opacity: 0.52;
+    top: 0px;
+    left: 0px;
+}
+div#work > div.container > div div.work-info:hover div.mask {
+    display: block;
+}
+div#work > div.container > div div.work-info div.info a{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 206px;
+    background:  url(images/icon/plus.png) no-repeat center center ;
+    text-indent: -9999px;
+    top: 0px;
+    left: 0px;
+}
+div#work > div.container > div div.work-info:hover div.info a {
+    display: block;
+}
+div#work > div.container > div div.work-info div.info h3{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 63px;
+    font-size: 18px;
+    line-height: 59px;
+    left: 0px;
+    bottom: 0px;
+    text-transform: uppercase;
+    background-color: #292f36;
+    color: white;
+    font-weight: normal;
+    padding-left: 20px;
+}
+div#work > div.container > div div.work-info:hover div.info h3 {
+    display: block;
+}
+div#work > div.container > div#show-btn{
+    display: flex;
+    justify-content: center;
+}
+div#work > div.container > div#show-btn a{
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    width: 151px;
+    height: 44px;
+    line-height: 44px;
+    border: 2px solid white;
+    border-radius: 3px;
+    color: white;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+div#work > div.container > div#show-btn a:hover{
+    border-color: #23b7a4;
+    background-color: #23b7a4;
+}
+div#whatdo > div.container{
+    height: 900px;
+}
+#whatdo div.container > div.detail {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#whatdo div.container > div.detail > div {
+    flex-basis: 254px;
+    height: 216px;
+    margin-bottom: 120px;
+}
+#whatdo div.container > div.detail > div div {
+    display: flex;
+    justify-content: center;
+}
+#whatdo div.container > div.detail > div h3{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 17px;
+    color: #292f36;  
+    margin-top: 29px;
+    margin-bottom: 19px;
+}
+#whatdo div.container > div.detail > div p{
+    text-align: center;
+    font-size: 16px;
+    color: #8d8f92;
+    line-height: 26px;
+}
+#feature div.container{
+    height: 730px;
+}
+#feature div.container > div {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+#feature div.container > div > div {
+    flex-basis: 360px;
+}
+#feature div.container > div > div h4{
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+    text-transform: uppercase;
+    line-height: 42px;
+    margin-top: 41px;
+    
+}
+#feature div.container > div > div p{
+    color: #dcdfe1;
+    font-size: 16px;
+    line-height: 26px;
+    font-weight: lighter;
+}
+#touch .container div h3{
+    text-transform: uppercase;
+    font-size: 20px;
+    color: #292f36;
+    font-weight: 500;
+    margin-left: 10px;
+}
+#touch .container:last-child {
+    height: 361px;
+    position: relative;
+}
+#touch .container div p {
+    font-size: 16px;
+    line-height: 26px;
+    color: #8d8f92;
+    margin-top: 20px;
+}
+#touch form {
+    display: inline-block;
+    position: absolute;
+    width: 555px;
+    height: 400px;
+    padding: 0px 30px;
+    right: 0px;
+    bottom: 165px;
+    background-color: white;
+}
+#touch form div#per-info{
+    display: flex;
+    justify-content: space-between;
+}
+#touch form div div {
+    display: inline-block;
+}
+#touch  label{
+    display: block;
+    color: #8d8f92;
+    font-size: 14px;
+    text-transform: uppercase;
+    line-height: 26px;
+    padding-left: 6px;
+    padding-bottom: 10px;
+    padding-top: 30px;
+}
+#touch input{
+    display: inline-block;
+    width: 240px;
+    height: 44px;
+    background-color: #eaeef1;
+    border-radius: 3px;
+    border: none;
+    padding: 0px 10px;
+}
+#touch form div#mess textarea{
+    width: 491px;
+    height: 159px;
+    background-color: #eaeef1;
+    border-radius: 3px;
+    border: none;
+    text-size-adjust: none;
+    padding: 5px 10px;
+}
+#touch button{
+    display: inline-block;
+    width: 150px;
+    height: 44px;
+    line-height: 44px;
+    text-transform: uppercase;
+    background-color: #23b7a4;
+    color: white;
+    border-radius: 3px;
+    border: none;
+    margin-top: 30px;
+}
+#touch button:hover{
+    cursor: pointer;
+    background-color: #23d2bb;
+}
+#touch #maps {
+    width: 100%;
+    background: black url(images/maps.jpg) no-repeat center center;
+    background-size: cover;
+    height: 346px;
+}
+#touch div#contact {
+    width: 550px;
+    padding: 30px 0px;
+}
+footer .container{
+    display: flex;
+    justify-content: space-between;
+    height: 95px;
+    align-items: center;
+}
+footer .container p {
+    color: white;
+    font-size: 14px;
+    line-height: 26px;
+    display: inline-block;
+}
+footer .container ul{
+    display: inline-block;
+}
+footer .container ul li {
+    display: inline-block;
+}
+footer .container ul li a {
+    display: block;
+    background-size: auto;
+    text-indent: -9999px;
+    width: 35px;
+    height: 35px;
+}
+footer .container ul li:nth-child(1) a{
+    background: transparent url(images/socials/twitter.png) no-repeat center center;
+}
+footer .container ul li:nth-child(2) a{
+    background: transparent url(images/socials/facebook.png) no-repeat center center;
+}
+footer .container ul li:nth-child(3) a{
+    background: transparent url(images/socials/skype.png) no-repeat center center;
+}
+footer .container ul li:nth-child(4) a{
+    background: transparent url(images/socials/be.png) no-repeat center center;
+}
+footer .container ul li:nth-child(5) a{
+    background: transparent url(images/socials/linkedin.png) no-repeat center center;
+}
+
