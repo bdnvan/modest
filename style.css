@@ -577,7 +577,8 @@ footer .container ul{
     display: inline-block;
 }
 footer .container ul li {
-    display: inline-block;
+    display: block;
+    float:left;
 }
 footer .container ul li a {
     display: block;
