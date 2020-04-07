@@ -8,9 +8,15 @@ body {
     margin: 0px auto;
 }
 .container {
-    width: 1140px;
+    max-width: 1170px;
     margin: 0px auto;
+    padding: 0px 15px;
 }
+.clearfix::after {
+    content: " ";
+    clear: both;
+    display: table;
+  }
 h2.title {
     display: inline-block;
     width: 100%;
@@ -30,6 +36,12 @@ h2.title-white{
 header{
     background-color: #1d2126;
     position: relative;
+}
+header label{
+    display: none;
+}
+header input{
+    display: none;
 }
 header .container{
     display: flex;
@@ -69,7 +81,6 @@ a:active, header .container ul li:first-child a {
     position: absolute;
     width: 653px;
     top: 222px;
-    left: 0px;
 }
 #banner div.container > div h2 {
     text-transform: uppercase;
@@ -114,7 +125,7 @@ a:active, header .container ul li:first-child a {
 #banner div.container > ul {
     display: inline-block;
     position: absolute;
-    right: 0px;
+    right: 15px;
     top: 628px;
 }
 #banner div.container > ul li{
@@ -142,7 +153,7 @@ a:active, header .container ul li:first-child a {
     border-bottom: 1px solid #dde1e4;
 }
 #about div.container{
-    height: 612px;
+    margin-bottom: 85px;
 }
 
 #about div.container div p {
@@ -153,11 +164,11 @@ a:active, header .container ul li:first-child a {
 }
 #about div.container div div#content-left {
     display: block;
-    width: 649px;
+    width: 57%;
     float: left;
 }
 #about div.container div div#content-left p:first-child {
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 #about div.container div div#content-left ul{
     margin-top: 54px;
@@ -175,9 +186,7 @@ a:active, header .container ul li:first-child a {
     text-decoration: none;
     text-indent: -9999px;
 }
-.clearfix {
-    overflow: auto;
-}
+
 #about div.container div div#content-left ul li:nth-child(1){ 
     background: #c8cdd0 url(images/socials/facebook.png) no-repeat center center;
 }
@@ -198,7 +207,7 @@ a:active, header .container ul li:first-child a {
 }
 #about div.container div div#content-right {
     display: block;
-    width: 455px;
+    width: 42%;
     float: right;
 }
 #about div.container div div#content-right ol{
@@ -243,24 +252,25 @@ a:active, header .container ul li:first-child a {
 }
 
 #team{
-    height: 650px;
+    padding-bottom: 95.44px;
+}
+#team > div.container{
+    max-width: 1170px;
 }
 #team > div.container > div {
     display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    flex-basis: 263px;
-    height: 375px;
+    flex-wrap: wrap;
 }
 #team > div.container > div > div {
     position: relative;
+    display: block;
+    flex-basis: calc((100% - 90px)/4);
 }
 #team > div.container > div > div > div.info {
-    position: absolute;
+    display: inline-block;
     width: 100%;
     height: 75px;
-    top: 300px;
-    left: 0px;
     padding-left: 20px;
     background-color: #e1e6ea;
 }
@@ -271,6 +281,10 @@ a:active, header .container ul li:first-child a {
     font-weight: normal;
     color: #292f36;
 }
+#team > div.container > div > div img{
+    display: block;
+    width: 100%;
+}
 #team > div.container > div > div > div p {
     font-size: 14px;
     line-height: 26px;
@@ -280,9 +294,8 @@ a:active, header .container ul li:first-child a {
     display: none;
     position: absolute;
     width: 100%;
-    height: 300px;
-    top: 0px;
-    left: 0px;
+    height: 100%;
+    top:0px;
     opacity: 0.4;
     background-color: #e5e9eb;
 }
@@ -290,9 +303,8 @@ a:active, header .container ul li:first-child a {
     display: none;
     position: absolute;
     top: 0px;
-    left: 0px;
     width: 100%;
-    height: 300px;
+    height: calc(100% - 75px);
     justify-content: center;
     align-items: center;
 }
@@ -318,6 +330,7 @@ a:active, header .container ul li:first-child a {
     display: block;
     float: left;
     margin-right: 1px;
+    margin-left: 0px;
 }
 #team div.container ul li a{
     display: block;
@@ -327,19 +340,19 @@ a:active, header .container ul li:first-child a {
     text-indent: -9999px;
 }
 #team div.container ul li:first-child a {
+    background-size: cover;
     background: #3a454d url(images/socials/twitter.png) no-repeat center center;
 }
 #team div.container ul li:nth-child(2) a {
+    background-size: cover;
     background: #3a454d url(images/socials/facebook.png) no-repeat center center;
 }
 #team div.container ul li:last-child a {
+    background-size: cover;
     background: #3a454d url(images/socials/linkedin.png) no-repeat center center;
 }
 .dark {
     background-color: #3a454d;
-}
-div#work div.container {
-    height: 900px;
 }
 div#work > div.container > div {
     display: flex;
@@ -349,12 +362,18 @@ div#work > div.container > div {
 div#work > div.container > div div.work-info{
     position: relative;
     margin-bottom: 30px;
+    flex-basis: calc((100% - 60px)/3);
+}
+#work > div.container > div div.work-info img{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 div#work > div.container > div div.work-info div.mask {
     display: none;
     position: absolute;
     width: 100%;
-    height: 206px;
+    height: 100%;
     background-color: #506371;
     opacity: 0.52;
     top: 0px;
@@ -363,24 +382,24 @@ div#work > div.container > div div.work-info div.mask {
 div#work > div.container > div div.work-info:hover div.mask {
     display: block;
 }
-div#work > div.container > div div.work-info div.info a{
+div#work > div.container > div div.work-info  a{
     display: none;
     position: absolute;
     width: 100%;
-    height: 206px;
+    height: calc(100% - 60px);
     background:  url(images/icon/plus.png) no-repeat center center ;
     text-indent: -9999px;
     top: 0px;
     left: 0px;
 }
-div#work > div.container > div div.work-info:hover div.info a {
+div#work > div.container > div div.work-info:hover a {
     display: block;
 }
-div#work > div.container > div div.work-info div.info h3{
+div#work > div.container > div div.work-info h3{
     display: none;
     position: absolute;
     width: 100%;
-    height: 63px;
+    height: 60px;
     font-size: 18px;
     line-height: 59px;
     left: 0px;
@@ -391,7 +410,7 @@ div#work > div.container > div div.work-info div.info h3{
     font-weight: normal;
     padding-left: 20px;
 }
-div#work > div.container > div div.work-info:hover div.info h3 {
+div#work > div.container > div div.work-info:hover h3 {
     display: block;
 }
 div#work > div.container > div#show-btn{
@@ -410,23 +429,22 @@ div#work > div.container > div#show-btn a{
     color: white;
     font-size: 14px;
     text-transform: uppercase;
+    margin-bottom: 60px;
 }
 div#work > div.container > div#show-btn a:hover{
     border-color: #23b7a4;
     background-color: #23b7a4;
 }
-div#whatdo > div.container{
-    height: 900px;
-}
+
 #whatdo div.container > div.detail {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin-bottom: 63px;
 }
 #whatdo div.container > div.detail > div {
-    flex-basis: 254px;
-    height: 216px;
-    margin-bottom: 120px;
+    flex-basis: calc((100% - 90px)/4);
+    padding-bottom: 95px;
 }
 #whatdo div.container > div.detail > div div {
     display: flex;
@@ -447,16 +465,20 @@ div#whatdo > div.container{
     color: #8d8f92;
     line-height: 26px;
 }
-#feature div.container{
-    height: 730px;
-}
 #feature div.container > div {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+    padding-bottom: 70px;
 }
 #feature div.container > div > div {
-    flex-basis: 360px;
+    flex-basis: calc((100% - 60px)/3);
+    height: 100%;
+}
+#feature div.container > div > div img{
+    display: block;
+    width: 100%;
+    height: 100%;
 }
 #feature div.container > div > div h4{
     font-size: 18px;
@@ -480,8 +502,10 @@ div#whatdo > div.container{
     font-weight: 500;
     margin-left: 10px;
 }
+#touch{
+    padding-bottom: 35px;
+}
 #touch .container:last-child {
-    height: 361px;
     position: relative;
 }
 #touch .container div p {
@@ -492,12 +516,11 @@ div#whatdo > div.container{
 }
 #touch form {
     display: inline-block;
+    width: calc((555/1170)*100%);
     position: absolute;
-    width: 555px;
-    height: 400px;
     padding: 0px 30px;
-    right: 0px;
-    bottom: 123px;
+    left: calc((555/1170)*100%);
+    bottom: 51px;
     background-color: white;
 }
 #touch form div#per-info{
@@ -506,20 +529,21 @@ div#whatdo > div.container{
 }
 #touch form div div {
     display: inline-block;
+    width: calc((100% - 15px)/2);
 }
 #touch  label{
     display: block;
     color: #8d8f92;
     font-size: 14px;
     text-transform: uppercase;
-    line-height: 26px;
+    line-height: 19px;
     padding-left: 6px;
     padding-bottom: 10px;
     padding-top: 30px;
 }
 #touch input{
     display: inline-block;
-    width: 240px;
+    width: 100%;
     height: 44px;
     background-color: #eaeef1;
     border-radius: 3px;
@@ -527,8 +551,7 @@ div#whatdo > div.container{
     padding: 0px 10px;
 }
 #touch form div#mess textarea{
-    width: 491px;
-    height: 159px;
+    width: 100%;
     background-color: #eaeef1;
     border-radius: 3px;
     border: none;
@@ -558,7 +581,8 @@ div#whatdo > div.container{
     height: 346px;
 }
 #touch div#contact {
-    width: 550px;
+    display: inline-block;
+    width: 40%;
     padding: 30px 0px;
 }
 footer .container{
@@ -601,5 +625,210 @@ footer .container ul li:nth-child(4) a{
 }
 footer .container ul li:nth-child(5) a{
     background: transparent url(images/socials/linkedin.png) no-repeat center center;
+}
+.break {
+    flex-basis: 100%;
+    height: 0;
+  }
+
+/* Responsive */
+
+@media screen and (max-width: 960px){
+    #banner div.container {
+        height: 660px;
+        position: static;
+    }
+    #banner div.container > div {
+        display: block;
+        width: auto;
+        position: static;
+        text-align: center;
+        padding-top: 150px;
+    }
+    #banner div.container > ul {
+        display: block;
+        position: static;
+        text-align: center;
+        padding-top: 220px;
+    }
+    #about div.container div div#content-right {
+        width: 48%;
+    }
+    #about div.container div div#content-left {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        line-height: 50px;
+        height: auto;
+        flex-wrap: wrap;
+    }
+    header .container div{
+        width: 100%;
+        text-align: center;
+        display: block;
+    }
+    header .container ul{
+        width: 100%;
+        text-align: center;
+    }
+    header .container ul li a{
+        margin-left: 0px;
+        font-size: 14px;
+    }
+
+    #team > div.container > div > div {
+        flex-basis: calc((100% - 30px)/2);
+        margin-top: 15px;
+    }
+
+    div#work > div.container > div div.work-info {
+        flex-basis: calc((100% - 30px)/2);
+    }
+
+    #whatdo div.container > div.detail > div {
+        flex-basis: calc((100% - 30px)/2);
+        padding-bottom: 35px;
+    }
+
+    #touch form div#per-info {
+        flex-wrap: wrap;
+    }
+    #touch form div div {
+        width: calc((100% - 15px));
+    }
+    #touch label {
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    header .container ul li {
+        display: none;
+    }
+    header label {
+        display: inline-block;
+        position: relative;
+        width: 35px;
+        height: 35px;
+        border-width: 5px 0px;
+        border-color: white;
+        border-style: solid;
+        margin: 15px;
+
+    }
+    header  input{
+        position: absolute;
+        display: none;
+        width: 35px;
+        height: 35px;
+        border: 5px;
+        opacity: 0.3;
+    }
+    
+    header label::before{
+        position: absolute;
+        top: calc((100% - 5px)/2);
+        left: 0px;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 5px;
+        background-color: white;
+
+    }
+    header .container {
+        line-height: 65px;
+    }
+    header .container div{
+        width: auto;
+        text-align: center;
+        display: block;
+    }
+    header .container input:checked + ul li {
+        display: block;
+    }
+
+    #about div.container div div#content-left {
+        width: 100%;
+        text-align: center;
+    }
+    #about div.container div div#content-left ul {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    #about div.container div div#content-left > ul > li {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        float: none; 
+    }
+    #about div.container div div#content-right {
+        width: 100%;
+    }
+
+    #team > div.container > div > div {
+        flex-basis: 100%;
+        margin-top: 15px;
+    }
+
+    div#work > div.container > div div.work-info {
+        flex-basis: 100%;
+    }
+
+    #whatdo div.container > div.detail > div {
+        flex-basis: 100%;
+    }
+
+    #feature div.container > div {
+        flex-wrap: wrap;
+        padding-bottom: 30px;
+    }
+    #feature div.container > div > div {
+        flex-basis: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    #feature div.container > div > div h4 {
+        margin-top: 10px;
+    }
+
+    #touch #maps {
+        height: 200px;
+    }
+    #touch .container:last-child {
+         position: static; 
+    }
+    #touch div#contact {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 30px 10px;
+    }
+    #touch form {
+        width: 100%;
+        position: static;
+        left: auto;
+        padding: 0 15px;
+    }
+    #touch form div div {
+        width: 100%;
+    }
+
+    footer .container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    footer .container ul {
+        margin-top: -20px;
+    }
+    footer .container p {
+        font-size: 16px;
+    }
+
 }
 
