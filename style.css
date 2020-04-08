@@ -685,8 +685,30 @@ footer .container ul li:nth-child(5) a{
         flex-basis: calc((100% - 30px)/2);
         margin-top: 15px;
     }
-    
-
+    #team > div.container > div > div{
+        position: relative;
+    }
+    #team > div.container > div > div::before{
+        content: '';
+        display: block;
+        width: 18px;
+        height: 18px;
+        background-image: url(images/icon/icons.png);
+        background-position: -19px -175px;
+        background-repeat: no-repeat;
+        background-size: auto;
+        position: absolute;
+        top: calc(100% - 47px);
+        right: 10px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    #team div.container > div > div:hover div.mask{
+        display: none;
+    }
+    #team div.container > div > div:hover div.mask {
+        display: block;
+    }
     div#work > div.container > div div.work-info {
         flex-basis: calc((100% - 30px)/2);
     }
@@ -695,12 +717,51 @@ footer .container ul li:nth-child(5) a{
         flex-basis: calc((100% - 30px)/2);
         padding-bottom: 35px;
     }
-
+    div#work > div.container > div div.work-info:hover div.mask {
+        display: none;
+    }
+    div#work > div.container > div div.work-info a {
+        display: block;
+        width: 30px;
+        height: 30px;
+        bottom: 15px;
+        right: 10px;
+        z-index: 1;
+        top: auto;
+        left: auto;
+    }
+    div#work > div.container > div div.work-info h3 {
+        display: block;
+        font-size: 15px;
+        padding-left: 10px;
+    }
     #touch form div#per-info {
         flex-wrap: wrap;
     }
     #touch form div div {
         width: 100%;
+    }
+    #touch .container:last-child {
+         position: static; 
+    }
+    #touch div#contact {
+        display: inline-block;
+        width: 100%;
+        text-align: center;
+        padding: 30px 10px;
+    }
+    #touch form {
+        width: 100%;
+        position: static;
+        left: auto;
+        padding: 0 15px;
+    }
+    #touch form div div {
+        width: 100%;
+    }
+    #touch form > div:last-child{
+        display: block;
+        text-align: center;
     }
     #touch label {
         padding-top: 20px;
@@ -788,6 +849,10 @@ footer .container ul li:nth-child(5) a{
     div#work > div.container > div div.work-info {
         flex-basis: 100%;
     }
+    div#work > div.container > div div.work-info h3 {
+        font-size: 17px;
+        padding-left: 20px;
+    }
 
     #whatdo div.container > div.detail > div {
         flex-basis: 100%;
@@ -808,24 +873,6 @@ footer .container ul li:nth-child(5) a{
 
     #touch #maps {
         height: 200px;
-    }
-    #touch .container:last-child {
-         position: static; 
-    }
-    #touch div#contact {
-        display: inline-block;
-        width: 100%;
-        text-align: center;
-        padding: 30px 10px;
-    }
-    #touch form {
-        width: 100%;
-        position: static;
-        left: auto;
-        padding: 0 15px;
-    }
-    #touch form div div {
-        width: 100%;
     }
     footer .container {
         justify-content: center;
