@@ -6,6 +6,19 @@
 body {
     font-family: Roboto, sans-serif;
     margin: 0px auto;
+    position: relative;
+}
+#movetop a {
+    content: ' ';
+    width: 70px;
+    height: 70px;
+    background: transparent url(images/icon/movetop.png) no-repeat center center;
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    bottom: 115px;
+    right: 15px;
+    text-indent: -9999px;
 }
 .container {
     max-width: 1170px;
@@ -401,7 +414,7 @@ div#work > div.container > div div.work-info h3{
     width: 100%;
     height: 60px;
     font-size: 18px;
-    line-height: 59px;
+    line-height: 60px;
     left: 0px;
     bottom: 0px;
     text-transform: uppercase;
@@ -634,6 +647,10 @@ footer .container ul li:nth-child(5) a{
 /* Responsive */
 
 @media screen and (max-width: 960px){
+    #movetop a {
+        width: 50px;
+        height: 50px;
+    }
     #banner div.container {
         height: 660px;
         position: static;
@@ -657,6 +674,11 @@ footer .container ul li:nth-child(5) a{
     #about div.container div div#content-left {
         width: 50%;
     }
+    div#work > div.container > div div.work-info h3 {
+        font-size: 15px;
+        padding-left: 0px;
+        text-align: center;
+    }
 }
 
 @media screen and (max-width: 768px){
@@ -679,6 +701,27 @@ footer .container ul li:nth-child(5) a{
     header .container ul li a{
         margin-left: 0px;
         font-size: 14px;
+    }
+
+    #about ol li {
+        padding-left: 20px;
+    }
+    #about div.container div div#content-left {
+        width: 100%;
+        text-align: center;
+    }
+    #about div.container div div#content-left ul {
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    #about div.container div div#content-left > ul > li {
+        display: inline-block;
+        width: 60px;
+        height: 60px;
+        float: none; 
+    }
+    #about div.container div div#content-right {
+        width: 100%;
     }
 
     #team > div.container > div > div {
@@ -732,8 +775,11 @@ footer .container ul li:nth-child(5) a{
     }
     div#work > div.container > div div.work-info h3 {
         display: block;
-        font-size: 15px;
-        padding-left: 10px;
+        text-align: left;
+        padding-left: 20px;
+    }
+    #feature div.container > div > div h4 {
+        font-size: 16px;
     }
     #touch form div#per-info {
         flex-wrap: wrap;
@@ -777,6 +823,10 @@ footer .container ul li:nth-child(5) a{
 }
 
 @media screen and (max-width: 500px){
+    #movetop a {
+        width: 40px;
+        height: 40px;
+    }
     header .container ul li {
         display: none;
     }
@@ -822,25 +872,14 @@ footer .container ul li:nth-child(5) a{
     header .container input:checked + ul li {
         display: block;
     }
-
-    #about div.container div div#content-left {
-        width: 100%;
-        text-align: center;
-    }
-    #about div.container div div#content-left ul {
-        margin-top: 30px;
-        margin-bottom: 30px;
-    }
-    #about div.container div div#content-left > ul > li {
-        display: inline-block;
-        width: 60px;
-        height: 60px;
-        float: none; 
-    }
-    #about div.container div div#content-right {
-        width: 100%;
+    
+    #banner div.container > ul {
+        padding-top: 40px;
     }
 
+    #team {
+        padding-bottom: 30px;
+    }
     #team > div.container > div > div {
         flex-basis: 100%;
         margin-top: 15px;
@@ -852,6 +891,9 @@ footer .container ul li:nth-child(5) a{
     div#work > div.container > div div.work-info h3 {
         font-size: 17px;
         padding-left: 20px;
+    }
+    div#work > div.container > div#show-btn a {
+        margin-bottom: 35px;
     }
 
     #whatdo div.container > div.detail > div {
