@@ -685,6 +685,7 @@ footer .container ul li:nth-child(5) a{
         flex-basis: calc((100% - 30px)/2);
         margin-top: 15px;
     }
+    
 
     div#work > div.container > div div.work-info {
         flex-basis: calc((100% - 30px)/2);
@@ -699,10 +700,18 @@ footer .container ul li:nth-child(5) a{
         flex-wrap: wrap;
     }
     #touch form div div {
-        width: calc((100% - 15px));
+        width: 100%;
     }
     #touch label {
         padding-top: 20px;
+    }
+
+    footer .container {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    footer .container p {
+        font-size: 16px;
     }
 }
 
@@ -818,13 +827,12 @@ footer .container ul li:nth-child(5) a{
     #touch form div div {
         width: 100%;
     }
-
     footer .container {
         justify-content: center;
         flex-wrap: wrap;
     }
     footer .container ul {
-        margin-top: -20px;
+        margin-top: -25px;
     }
     footer .container p {
         font-size: 16px;
